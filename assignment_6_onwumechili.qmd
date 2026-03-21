@@ -58,3 +58,9 @@ dbGetQuery(
 )
 ```
 
+#### c. Find the **average departure delay** (`dep_delay`)
+
+```{r}
+dbGetQuery(dbconn, "SELECT AVG(dep_delay) AS avg_dep_delay FROM flights;")
+```
+
