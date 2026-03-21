@@ -106,4 +106,16 @@ dbDisconnect(dbconn) # have to disconnect when done
 
 #### a. List the first **10 rows** of the `flights` table.
 
-![Query and output](assignment 6 part ii question a.JPG)
+![Query and output](part ii answers/assignment 6 part ii question a.JPG)
+
+#### b. Count the number of flights for each carrier.
+
+Find the **number of flights** for each carrier.
+
+    - Your output should include:
+        - carrier
+        - number of flights
+        
+Sort from the **largest to smallest**.
+
+![Query and output](part ii answers/assignment 6 part ii question b.JPG)
