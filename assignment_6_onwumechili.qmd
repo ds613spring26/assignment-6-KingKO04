@@ -34,55 +34,11 @@ dbGetQuery(
 )
 ```
 
-#### b. Count the Number of Flights for Each Carrier
+#### b. Find the **number of flights**
 
-Find the **number of flights** for each carrier.
-
-    - Your output should include:
-        - carrier
-        - number of flights
-        
-Sort from the **largest to smallest**.
+###### i. in the dataset
 
 ```{r}
-dbGetQuery(
-  dbconn,
-  "SELECT carrier, COUNT(*) AS num_flights
-  FROM flights
-  GROUP BY carrier
-  ORDER BY num_flights DESC;"
-)
-```
-
-#### c. Find the **average departure delay by month**
-
-    - Your output should include:
-        - month
-        - average departure delay
-        
-```{r}
-dbGetQuery(
-  dbconn,
-  "SELECT month, AVG(dep_delay) AS avg_dep_delay
-  FROM flights
-  GROUP BY month;"
-)
-```
-
-#### d. Find the **top 10 routes** (`dest`) by:
-
-    - `origin`
-    - `dest`
-    
-ordered by *number of flights*.
-
-```{r}
-dbGetQuery(
-  dbconn,
-  "SELECT origin, dest, COUNT(*) AS num_flights
-  FROM flights
-  GROUP BY origin, dest
-  ORDER BY num_flights DESC;"
-)
+dbGetQuery(dbconn, "SELECT COUNT(*) AS num_flights FROM flights")
 ```
 
