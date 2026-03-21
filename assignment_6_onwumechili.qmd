@@ -102,3 +102,8 @@ dbGetQuery(
 dbDisconnect(dbconn) # have to disconnect when done
 ```
 
+## Part II: Answer the following question by running SQL using DBeaver with DuckDB
+
+#### a. List the first **10 rows** of the `flights` table.
+
+![Query and output](assignment 6 part ii question a.JPG)
