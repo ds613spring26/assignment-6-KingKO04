@@ -1,0 +1,36 @@
+---
+title: "Assignment 6"
+author: "Kaodinna Onwumechili"
+format: pdf
+---
+
+```{r}
+suppressWarnings({
+  library(DBI)
+  library(duckdb)
+  library(nycflights13)
+  library(dbplyr)
+})
+```
+
+## Part I: Answer the following question by running SQL using RStudio.
+
+#### a. List the first 10 rows of the `flights` table.
+
+```{r}
+dbconn <- dbConnect(duckdb())
+dbWriteTable(dbconn, "flights", flights)
+```
+
+```{r}
+dbGetQuery(
+  dbconn,
+  # select all columns
+  # from flights
+  # only first 10 rows
+  "SELECT *
+  FROM flights
+  LIMIT 10;"
+)
+```
+
