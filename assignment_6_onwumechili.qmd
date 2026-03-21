@@ -128,7 +128,7 @@ Sort from the **largest to smallest**.
         
 ![Query and output](part ii answers/assignment 6 part ii question c.JPG)
 
-#### d. Find the *top 10 routes** (`dest`) by:
+#### d. Find the **top 10 routes** (`dest`) by:
 
     - `origin`
     - `dest`
