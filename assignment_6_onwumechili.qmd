@@ -48,10 +48,25 @@ Sort from the **largest to smallest**.
 dbGetQuery(
   dbconn,
   "SELECT carrier,
-  COUNT(*) as num_flights
+  COUNT(*) AS num_flights
   FROM flights
   GROUP BY carrier
   ORDER BY num_flights DESC;"
+)
+```
+
+#### c. Find the **average departure delay by month**
+
+    - Your output should include:
+        - month
+        - average departure delay
+        
+```{r}
+dbGetQuery(
+  dbconn,
+  "SELECT month, AVG(dep_delay) AS avg_dep_delay
+  FROM flights
+  GROUP BY month;"
 )
 ```
 
