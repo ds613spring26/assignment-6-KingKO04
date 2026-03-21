@@ -39,6 +39,22 @@ dbGetQuery(
 ###### i. in the dataset
 
 ```{r}
-dbGetQuery(dbconn, "SELECT COUNT(*) AS num_flights FROM flights")
+# count all columns, only show the count column
+# rename it as num_flights for increased readability
+dbGetQuery(dbconn, "SELECT COUNT(*) AS num_flights FROM flights;")
+```
+
+###### ii. for each carrier
+
+```{r}
+# select and group by carrier, as we are counting the number of flights for each
+# carrier
+dbGetQuery(
+  dbconn,
+  "SELECT carrier, COUNT(*) AS num_flights
+  FROM flights
+  GROUP BY carrier
+  ORDER BY num_flights DESC;"
+)
 ```
 
