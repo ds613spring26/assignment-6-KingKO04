@@ -64,3 +64,22 @@ dbGetQuery(
 dbGetQuery(dbconn, "SELECT AVG(dep_delay) AS avg_dep_delay FROM flights;")
 ```
 
+#### d. Find the **top 5 destinations** (`dest`) with the most flights.
+
+    - Your output should be:
+        - destination
+        - number of flights
+        
+Sort from the **largest to smallest**.
+
+```{r}
+dbGetQuery(
+  dbconn,
+  "SELECT dest, COUNT(*) as num_flights
+  FROM flights
+  GROUP BY dest
+  ORDER BY num_flights DESC
+  LIMIT 5;"
+)
+```
+
