@@ -127,3 +127,12 @@ Sort from the **largest to smallest**.
         - average departure delay
         
 ![Query and output](part ii answers/assignment 6 part ii question c.JPG)
+
+#### d. Find the *top 10 routes** (`dest`) by:
+
+    - `origin`
+    - `dest`
+    
+ordered by **number of flights**.
+
+![Query and output](part ii answers/assignment 6 part ii question d.JPG)
