@@ -79,7 +79,26 @@ dbGetQuery(
   FROM flights
   GROUP BY dest
   ORDER BY num_flights DESC
-  LIMIT 5;"
+  LIMIT 5;" # LIMIT shows the first n rows
 )
+```
+
+#### e. Create a table showing:
+
+    - `carrier`
+    - average arrival delay (`arr_delay`)
+    
+Sort the results from **largest to smallest delay**.
+
+```{r}
+dbGetQuery(
+  dbconn,
+  "SELECT carrier, AVG(arr_delay) AS avg_arr_delay
+  FROM flights
+  GROUP BY carrier
+  ORDER BY avg_arr_delay DESC;"
+)
+
+dbDisconnect(dbconn) # have to disconnect when done
 ```
 
